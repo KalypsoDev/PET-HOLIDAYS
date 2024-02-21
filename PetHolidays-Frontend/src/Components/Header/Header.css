@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+
+.containerBodyHeader {
+  background-color: #fec41d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerBodyHeaderLogos {
+  display: flex;
+  align-items: end;
+  position: relative;
+  left: 3rem;
+  gap: 1.5rem;
+}
+
+.h1LogoHeader {
+  font-family: "Abril Fatface", serif;
+  color: #3333cb;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.logotipoHeader {
+  width: 5rem;
+}
+
+.containerBodyHeaderLista {
+  list-style: none;
+  font-family: "Abril Fatface", serif;
+  color: #3333cb;
+  display: flex;
+  gap: 4rem;
+  margin-right: 3rem;
+  font-size: 20px;
+}

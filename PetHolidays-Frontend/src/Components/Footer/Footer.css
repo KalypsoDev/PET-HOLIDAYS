@@ -1,0 +1,28 @@
+.contenedorMainFooter {
+  background: linear-gradient(to top, #fec41d, #f5f5f5);
+}
+
+.containerContactPet {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenedorH1Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.h1Footer {
+  font-family: "Abril Fatface", serif;
+  color: #3333cb;
+  font-size: 20px;
+}
+
+.listaFooter {
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  color: #3333cb;
+  font-size: 20px;
+}
