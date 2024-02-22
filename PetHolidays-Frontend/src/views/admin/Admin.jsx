@@ -1,12 +1,15 @@
-import './Admin.css'
+import Footer from '../../Components/Footer/Footer';
+import Header from '../../Components/Header/Header';
+import ApartmentShow from '../../Components/card/ApartmentShow';
+import "./admin.css";
 
-
-function Admin(){
-    return (
-      <>
-      {/* aqui la vista para el administrador llamando al componente con true
-      <ApartmentShow isAdmin={true}/> */}
-      </>  
-    );
+function Admin() {
+  return (
+    <>
+      <Header />
+      <ApartmentShow isAdmin={true} />
+      <Footer />
+    </>
+  );
 }
 export default Admin;
