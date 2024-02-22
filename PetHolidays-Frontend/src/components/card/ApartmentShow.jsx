@@ -9,8 +9,7 @@ import Col from "react-bootstrap/Col";
 import { apartmentService } from "../../service/apartmentService";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 function ApartmentShow({ isAdmin }) {
   const navigate = useNavigate();
@@ -34,18 +33,25 @@ function ApartmentShow({ isAdmin }) {
   function handleClick() {}
 
   function handleClickEdit(apartment, id) {
-    const findedApartment = apartmentList.find(apartment => apartment.id === id);
+    const findedApartment = apartmentList.find(
+      (apartment) => apartment.id === id
+    );
     setApartmentSelected(findedApartment);
-    navigate('/EditApartment', { state: { apartment} });
+    navigate("/EditApartment", { state: { apartment } });
   }
 
   async function handleClickDelete(index) {
     try {
-        const apartments = await apartmentService.deleteApartment(index);
-        setApartmentList(apartments);
-      } catch (error) {
-        console.error("Error al obtener los datos:", error);
-      }
+      const apartments = await apartmentService.deleteApartment(index);
+
+      const updatedApartmentList = apartmentList.filter(
+        (apartment, index) => index !== indexToDelete
+      );
+
+      setApartmentList(updatedApartmentList);
+    } catch (error) {
+      console.error("Error al obtener los datos:", error);
+    }
   }
 
   function modalBotones(titulo, texto, icono, danger) {
@@ -63,6 +69,24 @@ function ApartmentShow({ isAdmin }) {
   return (
     <>
       <Container>
+        {isAdmin ? (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "5px",
+              marginRight: "5px",
+            }}
+          >
+            <Button variant="primary" className="custom-button">
+              <Link to={"/AddAlojamiento"}>Añadir Alojamiento</Link>
+            </Button>
+            <div style={{ width: "10px" }}></div>{" "}
+            {/* Espacio entre los botones */}
+          </div>
+        ) : (
+          <br></br>
+        )}
         {apartmentList.map((apartment, index) => (
           <div
             key={index}
@@ -103,7 +127,7 @@ function ApartmentShow({ isAdmin }) {
                     <div>
                       <br></br>
                       <Card.Title style={{ color: "blue" }}>
-                        {apartment.name}
+                        {apartment.title}
                       </Card.Title>
                       <Card.Text
                         style={{
@@ -112,7 +136,7 @@ function ApartmentShow({ isAdmin }) {
                           marginBottom: "10px",
                         }}
                       >
-                        {apartment.title}
+                        {apartment.city}
                       </Card.Text>
                       <Card.Text>
                         {apartment.description}
@@ -135,7 +159,9 @@ function ApartmentShow({ isAdmin }) {
                           <Button
                             variant="primary"
                             className="custom-button"
-                            onClick={() => handleClickEdit(apartment, apartment.id)}
+                            onClick={() =>
+                              handleClickEdit(apartment, apartment.id)
+                            }
                           >
                             Editar
                           </Button>
