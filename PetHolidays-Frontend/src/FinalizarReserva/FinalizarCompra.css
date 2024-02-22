@@ -1,0 +1,23 @@
+.container3{
+    background: #411edc;
+    width: 400px;
+    padding: 52px 50px;
+    color: #fff;
+    border-radius: 10%;
+}
+
+textarea{
+    width: 300px;
+    border-radius: 2%;
+}
+label{
+    color: #fff;
+}
+.modal-body{
+    color: #000;
+    font-weight: bold;
+}
+.modal-title .modal-body{
+    color: #000;
+    font-weight: bold;
+}
