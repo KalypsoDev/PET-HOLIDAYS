@@ -1,0 +1,17 @@
+.containerMainBodyHome {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 70px 0;
+}
+
+.containerPBodyHome {
+  width: 45rem;
+}
+
+.pBodyHome {
+  font-family:"Open Sans", sans-serif;
+  color: #3333cb;
+  font-size: 24px;
+  margin-top: 40px;
+}
