@@ -1,5 +1,6 @@
 import "./Header.css"
 import logo from "../../assets/logo-nav.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -9,10 +10,10 @@ export default function Header() {
         <h1 className="h1LogoHeader">Pet Holydays</h1>
       </div>
       <ul className="containerBodyHeaderLista">
-        <li>INICIO</li>
-        <li>ALOJAMIENTO</li>
-        <li>CONTACTO</li>
-        <li>ADMINISTRAR</li>
+        <li><Link to="/">INICIO</Link></li>
+        <li><Link to="/User">ALOJAMIENTO</Link></li>
+        <li><Link to="/Contact">CONTACTO</Link></li>
+        <li><Link to="/Admin">ADMINISTRAR</Link></li>
       </ul>
     </article>
   );
