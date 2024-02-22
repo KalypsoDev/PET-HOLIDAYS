@@ -10,6 +10,7 @@
 textarea{
     width: 300px;
     border-radius: 2%;
+    color: #000;
 }
 label{
     color: #fff;
