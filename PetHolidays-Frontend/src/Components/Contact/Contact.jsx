@@ -4,6 +4,7 @@ import './Contact.css';
 import { Modal } from 'bootstrap';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import MapComponent from './MapComponent';
 
 const FormularioContacto = () => {
   const [formData, setFormData] = useState({
@@ -43,27 +44,34 @@ const FormularioContacto = () => {
     <Header/>
     <div className="container4 mt-5">
       <h2>Contáctanos</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Tu nombre</label>
-          <input type="text" className="form-control" style={{ width: '300px' }} id="name" name="name" value={formData.name} onChange={handleChange} required />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Tu correo electrónico</label>
-          <input type="email" className="form-control" style={{ width: '300px' }} id="email" name="email" value={formData.email} onChange={handleChange} required />
-        </div>
-        <div className="mb-3">
-          <label>
-            <p>Tu mensaje</p>
-          </label>
-          <textarea></textarea>
-        </div>
-        <button type="submit" className="btn btn-primary">Enviar</button>
-        <div className="mt-3 form-check">
-          <input type="checkbox" className="form-check-input" id="terms" name="termsChecked" checked={formData.termsChecked} onChange={handleChange} required />
-          <label className="form-check-label" htmlFor="terms">Acepto los términos y condiciones</label>
-        </div>
-      </form>
+      <div className="contact-container">
+        {/* Formulario */}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">Tu nombre</label>
+            <input type="text" className="form-control" style={{ width: '300px' }} id="name" name="name" value={formData.name} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Tu correo electrónico</label>
+            <input type="email" className="form-control" style={{ width: '300px' }} id="email" name="email" value={formData.email} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label>
+              <p>Tu mensaje</p>
+            </label>
+            <textarea></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary">Enviar</button>
+          <div className="mt-3 form-check">
+            <input type="checkbox" className="form-check-input" id="terms" name="termsChecked" checked={formData.termsChecked} onChange={handleChange} required />
+            <label className="form-check-label" htmlFor="terms">Acepto los términos y condiciones</label>
+          </div>
+        </form>
+        <div className='container-mapa'>
+        {/* Mapa */}
+        <MapComponent/>
+      </div>
+      </div>
 
       {/* Modal */}
       <div className="modal" id="termsModal" tabIndex="-1">

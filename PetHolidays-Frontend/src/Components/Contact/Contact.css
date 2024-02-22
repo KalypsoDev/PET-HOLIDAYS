@@ -4,7 +4,7 @@
     padding: 52px 50px;
     color: #fff;
     border-radius: 10%;
-    margin-left: 40%;
+    margin-left: 10%;
 }
 
 textarea{
@@ -23,3 +23,15 @@ label{
     color: #000;
     font-weight: bold;
 }
+
+.contact-container {
+    display: flex;
+    align-items: flex-start; /* Ajusta la alineación vertical según sea necesario */
+  }
+  
+  .contact-container form {
+    margin-right: 20px; /* Espacio entre el formulario y el mapa */
+  }
+  .container-mapa {
+    margin-left: 90%;
+  }
