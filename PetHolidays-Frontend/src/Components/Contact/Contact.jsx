@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Contact.css';
 import { Modal } from 'bootstrap';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
-const FormularioContacto = ({ total }) => {
+const FormularioContacto = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    address: '',
-    city: '',
-    zip: ''
   });
 
   const [modalInstance, setModalInstance] = useState(null);
@@ -40,7 +39,9 @@ const FormularioContacto = ({ total }) => {
   };
 
   return (
-    <div className="container mt-5">
+    <>
+    <Header/>
+    <div className="container4 mt-5">
       <h2>Contáctanos</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -57,11 +58,7 @@ const FormularioContacto = ({ total }) => {
           </label>
           <textarea></textarea>
         </div>
-        <div className="mb-3">
-          <label className="">Total</label>
-          <p>{total} euros</p>
-        </div>
-        <button type="submit" className="btn btn-primary">Finalizar Reserva</button>
+        <button type="submit" className="btn btn-primary">Enviar</button>
         <div className="mt-3 form-check">
           <input type="checkbox" className="form-check-input" id="terms" name="termsChecked" checked={formData.termsChecked} onChange={handleChange} required />
           <label className="form-check-label" htmlFor="terms">Acepto los términos y condiciones</label>
@@ -86,6 +83,8 @@ const FormularioContacto = ({ total }) => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

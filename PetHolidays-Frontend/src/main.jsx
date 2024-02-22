@@ -7,6 +7,7 @@ import FinalizarReserva from "./Components/FinalizarReserva/FinalizarReserva"; /
 import Home from "./Components/Home/Home";
 import User from "./views/user/User";
 import Admin from "./views/admin/Admin";
+import Contact from "./Components/Contact/Contact";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/FinalizarReserva" element={<FinalizarReserva />} />
         <Route path="/User" element={<User />} />
         <Route path="/Admin" element={<Admin />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
