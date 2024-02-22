@@ -18,9 +18,10 @@ class AccommodationController extends Controller
 
     public function store(AccommodationRequest $request): JsonResponse
     {
-        Accommodation::create($request->all());
+        $accommodation = Accommodation::create($request->all());
         return response()->json([
-            'success' => true
+            'success' => true,
+            'data' => $accommodation
         ], 201);
     }
 
@@ -41,7 +42,8 @@ class AccommodationController extends Controller
         $accommodation->save();
 
         return response()->json([
-            'success' => true
+            'success' => true,
+            'data' => $accommodation
         ], 200);
     }
 
