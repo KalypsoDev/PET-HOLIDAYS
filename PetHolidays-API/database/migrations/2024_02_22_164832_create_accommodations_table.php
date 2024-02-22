@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('accommodations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('title');
+            $table->double('price', 8, 2);
+            $table->string('city');
+            $table->string('image');
+            $table->string('description');
         });
     }
 
