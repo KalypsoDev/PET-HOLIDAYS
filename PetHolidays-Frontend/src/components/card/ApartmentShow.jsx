@@ -7,9 +7,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { apartmentService } from "../../service/apartmentService";
-import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 function ApartmentShow({ isAdmin }) {
   const navigate = useNavigate();
@@ -32,8 +33,10 @@ function ApartmentShow({ isAdmin }) {
 
   function handleClick() {}
 
-  function handleClickEdit() {
-    //aqui pasamos a la pagina de edicion
+  function handleClickEdit(apartment, id) {
+    const findedApartment = apartmentList.find(apartment => apartment.id === id);
+    setApartmentSelected(findedApartment);
+    navigate('/EditApartment', { state: { apartment} });
   }
 
   async function handleClickDelete(index) {
@@ -131,8 +134,8 @@ function ApartmentShow({ isAdmin }) {
                         >
                           <Button
                             variant="primary"
-                            onClick={() => handleClickEdit()}
                             className="custom-button"
+                            onClick={() => handleClickEdit(apartment, apartment.id)}
                           >
                             Editar
                           </Button>
