@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="containerContactPet">
           <img src={logoFooter} alt="logotipo Footer" />
           <ul className="listaFooter">
-            <li>Contacto</li>
-            <li>685452985 - 904768823</li>
-            <li>contacto@petholidays.com</li>
-            <li>C/ Embajadores, 54, 28005 Madrid</li>
+            <li className="lista">Contacto</li>
+            <li className="lista">685452985 - 904768823</li>
+            <li className="lista">contacto@petholidays.com</li>
+            <li className="lista">C/ Embajadores, 54, 28005 Madrid</li>
           </ul>
         </div>
         <div className="contenedorH1Footer">
@@ -20,8 +20,9 @@ export default function Footer() {
         </div>
       </article>
       <hr />
-      <section>
-        <img src={socialMedia} alt="" />
+      <section className="containerLogosSocialMedia">
+        <img className="logosSocialMedia" src={socialMedia} alt="" />
+        <h2 className="h2Footer">Copyright 2024 Pet Holidays.</h2>
       </section>
     </main>
   );

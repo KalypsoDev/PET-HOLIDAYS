@@ -8,10 +8,10 @@
   align-items: center;
 }
 .contenedorH1Footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
 }
 
 .h1Footer {
@@ -25,4 +25,29 @@
   font-family: "Open Sans", sans-serif;
   color: #3333cb;
   font-size: 20px;
+
+}
+
+.lista {
+    margin-top: 30px;
+}
+
+.containerLogosSocialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logosSocialMedia {
+  width: 20rem;
+  margin-top: 40px;
+}
+
+.h2Footer {
+  font-family: "Open Sans", sans-serif;
+  color: #3333cb;
+  font-size: 15px;
+  font-weight: lighter;
 }
