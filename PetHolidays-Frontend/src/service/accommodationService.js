@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "http://127.0.0.1:8000/api/",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -9,25 +9,25 @@ const apiClient = axios.create({
   },
 });
 
-export const apartmentService = {
-  async getAllApartments() {
-    let response = await apiClient.get("/apartments");
-    let allApartments = response.data;
-    return allApartments;
+export const accommodationService = {
+  async getAllAccommodations() {
+    let response = await apiClient.get("/accommodations");
+    let allAccommodations = response.data;
+    return allAccommodations;
   },
 
-  async submitApartment(apartment) {
-    let updatedResponse = await apiClient.post("/apartments", apartment);
+  async submitAccommodation(accommodation) {
+    let updatedResponse = await apiClient.post("/accommodation", accommodation);
     return updatedResponse;
   },
 
-  async deleteApartment(index) {
+  async deleteAccommodation(id) {
     try {
-      const url = `/apartments/${index}`;
+      const url = `/accommodation/${id}`;
       console.log("URL de la solicitud de eliminación:", url);
 
       let respuesta = await apiClient.delete(url);
-      console.log("vivienda eliminado:", respuesta);
+      console.log("vivienda eliminada:", respuesta);
       return respuesta;
     } catch (error) {
       console.error(
@@ -39,10 +39,10 @@ export const apartmentService = {
     }
   },
 
-  async updateApartment(apartment, index) {
+  async updateAccommodation(accommodation, id) {
     let updatedResponse = await apiClient.patch(
-      `/apartments/${apartment.id}`,
-      apartment
+      `/accommodation/${accommodation.id}`,
+      accommodation
     );
     return updatedResponse;
   },

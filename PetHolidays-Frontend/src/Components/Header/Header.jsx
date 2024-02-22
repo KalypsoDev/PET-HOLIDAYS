@@ -7,7 +7,7 @@ export default function Header() {
     <article className="containerBodyHeader">
       <div className="containerBodyHeaderLogos">
         <img className="logotipoHeader" src={logo} alt="logotipo Pet Holidays" />
-        <h1 className="h1LogoHeader">Pet Holydays</h1>
+        <h1 className="h1LogoHeader">Pet Holidays</h1>
       </div>
       <ul className="containerBodyHeaderLista">
         <li className="containerBodyHeaderListaLi"><Link to="/">INICIO</Link></li>
