@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Accommodation;
 
 class AccommodationController extends Controller
 {
@@ -12,7 +13,8 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        //
+        $accommodations = Accommodation::all();
+        return response()->json($accommodations, 200);
     }
 
     /**
