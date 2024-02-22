@@ -42,6 +42,7 @@ const FormularioContacto = () => {
   return (
     <>
     <Header/>
+    <main style={{ marginTop: "125px"}}>
     <div className="container4 mt-5">
       <h2>Contáctanos</h2>
       <div className="contact-container">
@@ -91,6 +92,7 @@ const FormularioContacto = () => {
         </div>
       </div>
     </div>
+    </main>
     <Footer/>
     </>
   );

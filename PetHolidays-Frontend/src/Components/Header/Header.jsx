@@ -10,10 +10,10 @@ export default function Header() {
         <h1 className="h1LogoHeader">Pet Holydays</h1>
       </div>
       <ul className="containerBodyHeaderLista">
-        <li><Link to="/">INICIO</Link></li>
-        <li><Link to="/User">ALOJAMIENTO</Link></li>
-        <li><Link to="/Contact">CONTACTO</Link></li>
-        <li><Link to="/Admin">ADMINISTRAR</Link></li>
+        <li className="containerBodyHeaderListaLi"><Link to="/">INICIO</Link></li>
+        <li className="containerBodyHeaderListaLi"><Link to="/User">ALOJAMIENTO</Link></li>
+        <li className="containerBodyHeaderListaLi"><Link to="/Contact">CONTACTO</Link></li>
+        <li className="containerBodyHeaderListaLi"><Link to="/Admin">ADMINISTRAR</Link></li>
       </ul>
     </article>
   );

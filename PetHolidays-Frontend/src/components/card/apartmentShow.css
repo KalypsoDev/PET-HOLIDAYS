@@ -1,27 +1,27 @@
 .precioDestacado {
-    color: rgb(236, 138, 9); 
-  }
+  color: #3333cb;
+  font-size: 25px;
+  font-weight: bold;
+}
 
+.sombreado {
+  box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.774);
+}
 
-  .sombreado {
-    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.774);
-  }
-
-
-  .amarillo {
-    background-color: yellow;
+.amarillo {
+  background-color: #fec41d;
 }
 
 .rosa {
-    background-color: pink;
+  background-color: #ff96d3;
 }
 
 .verde {
-    background-color: lightgreen;
+  background-color: #00ddb5;
 }
 
 .custom-button {
   background-color: white;
-  color: blue;
-  font-family: 'Abril Fatface', cursive;
+  color: #3333cb;
+  font-family: "Abril Fatface", cursive;
 }
