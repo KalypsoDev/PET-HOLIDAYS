@@ -23,9 +23,9 @@ class AccommodationRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255|min:3',
-            'price' => 'nullable|numeric',
+            'price' => 'required|numeric',
             'city' => 'required|max:255|min:3',
-            'image' => 'nullable|url',
+            'image' => 'required|url',
             'description' => 'required|max:255|min:3'
         ];
     }
