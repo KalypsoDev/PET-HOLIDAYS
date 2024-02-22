@@ -45,11 +45,11 @@ class AccommodationController extends Controller
         ], 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        Accommodation::find($id)->delete();
+        return response()->json([
+            'success' => true
+        ], 200);
     }
 }
