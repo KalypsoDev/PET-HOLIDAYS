@@ -30,12 +30,19 @@ class AccommodationController extends Controller
         return response()->json($accommodation, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function update(AccommodationRequest $request, $id)
     {
-        //
+        $accommodation = Accommodation::find($id);
+        $accommodation->title = $request->title;
+        $accommodation->price = $request->price;
+        $accommodation->city = $request->city;
+        $accommodation->image = $request->image;
+        $accommodation->description = $request->description;
+        $accommodation->save();
+
+        return response()->json([
+            'success' => true
+        ], 200);
     }
 
     /**
