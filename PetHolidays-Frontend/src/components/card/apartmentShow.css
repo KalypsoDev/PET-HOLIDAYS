@@ -1,0 +1,27 @@
+.precioDestacado {
+    color: rgb(236, 138, 9); 
+  }
+
+
+  .sombreado {
+    box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.774);
+  }
+
+
+  .amarillo {
+    background-color: yellow;
+}
+
+.rosa {
+    background-color: pink;
+}
+
+.verde {
+    background-color: lightgreen;
+}
+
+.custom-button {
+  background-color: white;
+  color: blue;
+  font-family: 'Abril Fatface', cursive;
+}

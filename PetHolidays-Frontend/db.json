@@ -1,0 +1,28 @@
+{
+  "apartments": [
+    {
+      "id": "4",
+      "title": "Apartamento en el centro",
+      "price": "78.22",
+      "city": "Oviedo",
+      "image": "https://i.postimg.cc/26sThcpY/casita6.png",
+      "description": "Apartamento en el centro de Oviedo la ciudad, bien comunicado, se aceptan animales en todo el edifcio, parque cercano."
+    },
+    {
+      "id": "5",
+      "title": "CAsita pequeña",
+      "price": "68.49",
+      "city": "Barcelona",
+      "image": "https://i.postimg.cc/YCYnRwrP/casita5.jpg",
+      "description": "Ambiente intimo y acogedor en una casita ideal para parejas, con patio amplio."
+    },
+    {
+      "id": "6",
+      "title": "Casa rural",
+      "price": "88.97",
+      "city": "sevilla",
+      "image": "https://i.postimg.cc/L81BSkGg/casita3.png",
+      "description": "Casa rural amplia, perfecto para familias con niños y tus mascotas, con jardín privado."
+    }
+  ]
+}
