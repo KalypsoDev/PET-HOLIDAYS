@@ -104,7 +104,7 @@ function ApartmentShow({ isAdmin }) {
                                                 </div>
 
                                             ) : (
-                                                <Button variant="primary" className="custom-button"> reservar</Button>
+                                                <Button variant="primary" className="custom-button"> <Link to={'/FinalizarReserva'}>reservarrrr</Link></Button>
                                             )}                      </div>
                                     </div>
                                 </Card.Body>
