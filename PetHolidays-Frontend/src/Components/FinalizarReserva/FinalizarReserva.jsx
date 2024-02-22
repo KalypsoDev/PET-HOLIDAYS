@@ -44,6 +44,7 @@ const FormularioReserva = ({ total }) => {
   return (
     <>
     <Header/>
+    <main style={{marginTop: "125px"}}>
     <div className="container3 mt-5">
       <h2>Finaliza tu Reserva</h2>
       <form onSubmit={handleSubmit}>
@@ -90,6 +91,7 @@ const FormularioReserva = ({ total }) => {
         </div>
       </div>
     </div>
+    </main>
     <Footer/>
     </>
   );

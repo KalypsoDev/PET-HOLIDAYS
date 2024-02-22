@@ -27,8 +27,7 @@ function EditApartment() {
     const { name, value } = event.target;
     setEditedAparment({ ...editedApartment, [name]: value });
   };
-
-  //cuando hacemos clic en el boton guardar, actualizamos los datos en el json y luego la vble editable a false para que se pongan los campos como No editables otra vez
+  
   function modalBotones(titulo, texto, icono, danger) {
     swal({
       title: titulo,
@@ -66,6 +65,7 @@ function EditApartment() {
   return (
     <>
       <Header />
+      <main style={{marginTop: "125px"}}>
       <div
         style={{
           display: "flex",
@@ -140,6 +140,7 @@ function EditApartment() {
           </Card.Body>
         </Card>
       </div>
+      </main>
       <Footer />
     </>
   );

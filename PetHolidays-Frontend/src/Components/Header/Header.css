@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
 }
 
 .containerBodyHeaderLogos {
@@ -36,4 +40,12 @@
   gap: 4rem;
   margin-right: 3rem;
   font-size: 20px;
+
 }
+.containerBodyHeaderListaLi {
+ text-decoration: none;
+}
+.containerBodyHeaderListaLi a {
+  text-decoration: none;
+ }
+

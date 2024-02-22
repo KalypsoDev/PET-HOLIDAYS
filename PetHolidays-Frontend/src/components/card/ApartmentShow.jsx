@@ -68,6 +68,7 @@ function ApartmentShow({ isAdmin }) {
 
   return (
     <>
+    <main style={{marginTop: "125px"}}>
       <Container>
         {isAdmin ? (
           <div
@@ -79,10 +80,9 @@ function ApartmentShow({ isAdmin }) {
             }}
           >
             <Button variant="primary" className="custom-button">
-              <Link to={"/AddAlojamiento"}>Añadir Alojamiento</Link>
+              <Link to={"/AddAlojamiento"} style={{textDecoration: "none", color: "inherit"}}>Añadir Alojamiento</Link>
             </Button>
             <div style={{ width: "10px" }}></div>{" "}
-            {/* Espacio entre los botones */}
           </div>
         ) : (
           <br></br>
@@ -126,7 +126,7 @@ function ApartmentShow({ isAdmin }) {
                   >
                     <div>
                       <br></br>
-                      <Card.Title style={{ color: "blue" }}>
+                      <Card.Title style={{ color: "blue",  fontSize: 30 }}>
                         {apartment.title}
                       </Card.Title>
                       <Card.Text
@@ -162,6 +162,7 @@ function ApartmentShow({ isAdmin }) {
                             onClick={() =>
                               handleClickEdit(apartment, apartment.id)
                             }
+                      
                           >
                             Editar
                           </Button>
@@ -177,8 +178,7 @@ function ApartmentShow({ isAdmin }) {
                         </div>
                       ) : (
                         <Button variant="primary" className="custom-button">
-                          {" "}
-                          <Link to={"/FinalizarReserva"}>reservar</Link>
+                          <Link to={"/FinalizarReserva"} style={{textDecoration: "none", color: "inherit"}}>Reservar</Link>
                         </Button>
                       )}{" "}
                     </div>
@@ -189,6 +189,7 @@ function ApartmentShow({ isAdmin }) {
           </div>
         ))}
       </Container>
+      </main>
     </>
   );
 }
