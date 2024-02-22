@@ -1,20 +1,12 @@
 {
   "apartments": [
     {
-      "id": "3",
-      "title": "Casa en la playa",
-      "price": "78.74",
-      "city": "Málaga",
-      "image": "https://i.postimg.cc/L5Fw268j/casita1.png",
-      "description": "Disfruta tus vacaciones junto a tu mejor amigo en un ambiente tranquilo y a pie de playa."
-    },
-    {
       "id": "4",
       "title": "Apartamento en el centro",
       "price": "78.22",
       "city": "Oviedo",
       "image": "https://i.postimg.cc/26sThcpY/casita6.png",
-      "description": "Apartamento en el centro de la ciudad, bien comunicado, se aceptan animales en todo el edifcio, parque cercano."
+      "description": "Apartamento en el centro de Oviedo la ciudad, bien comunicado, se aceptan animales en todo el edifcio, parque cercano."
     },
     {
       "id": "5",

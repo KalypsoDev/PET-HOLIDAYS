@@ -8,17 +8,18 @@ import Home from "./Components/Home/Home";
 import User from "./views/user/User";
 import Admin from "./views/admin/Admin";
 import Contact from "./Components/Contact/Contact";
+import EditApartment from "./Components/EditApartment/EditApartment";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/FinalizarReserva" element={<FinalizarReserva />} />
         <Route path="/User" element={<User />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/EditApartment" element={<EditApartment />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
