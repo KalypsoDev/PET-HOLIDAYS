@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './FinalizarCompra.css';
 import { Modal } from 'bootstrap';
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const FormularioReserva = ({ total }) => {
   const [formData, setFormData] = useState({
@@ -40,6 +42,8 @@ const FormularioReserva = ({ total }) => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="container3 mt-5">
       <h2>Finaliza tu Reserva</h2>
       <form onSubmit={handleSubmit}>
@@ -86,6 +90,8 @@ const FormularioReserva = ({ total }) => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
