@@ -9,6 +9,7 @@ import User from "./views/user/User";
 import Admin from "./views/admin/Admin";
 import Contact from "./Components/Contact/Contact";
 import EditApartment from "./Components/EditApartment/EditApartment";
+import AddAlojamiento from "./Components/AddAlojamiento/AddAlojamiento";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/EditApartment" element={<EditApartment />} />
+        <Route path="/AddAlojamiento" element={<AddAlojamiento />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

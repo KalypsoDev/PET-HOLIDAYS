@@ -6,11 +6,11 @@
       "price": "78.22",
       "city": "Oviedo",
       "image": "https://i.postimg.cc/26sThcpY/casita6.png",
-      "description": "Apartamento en el centro de Oviedo la ciudad, bien comunicado, se aceptan animales en todo el edifcio, parque cercano."
+      "description": "Apartamento en el centro la ciudad, bien comunicado, se aceptan animales en todo el edifcio, parque cercano."
     },
     {
       "id": "5",
-      "title": "CAsita pequeña",
+      "title": "Casita pequeña",
       "price": "68.49",
       "city": "Barcelona",
       "image": "https://i.postimg.cc/YCYnRwrP/casita5.jpg",
@@ -23,6 +23,14 @@
       "city": "sevilla",
       "image": "https://i.postimg.cc/L81BSkGg/casita3.png",
       "description": "Casa rural amplia, perfecto para familias con niños y tus mascotas, con jardín privado."
+    },
+    {
+      "id": "0",
+      "title": "Casita acogedora",
+      "price": "70",
+      "city": "Calle Galerna 7",
+      "image": "https://i.postimg.cc/dQC5wYdV/casita7.png",
+      "description": "Bonita casita con vistas a la playa"
     }
   ]
 }
