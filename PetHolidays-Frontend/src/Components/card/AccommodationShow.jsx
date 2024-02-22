@@ -1,4 +1,4 @@
-import "./apartmentShow.css";
+import "./accommodationShow.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
@@ -6,21 +6,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { apartmentService } from "../../service/apartmentService";
+import { accommodationService } from "../../service/accommodationService";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function ApartmentShow({ isAdmin }) {
+function AccommodationShow({ isAdmin }) {
   const navigate = useNavigate();
-  const [apartmentList, setApartmentList] = useState([]);
-  const [apartmentSelected, setApartmentSelected] = useState(null);
+  const [accommodationList, setAccommodationList] = useState([]);
+  const [accommodationSelected, setAccommodationSelected] = useState(null);
 
   //esta es la función que carga los datos almacenados en el json
   async function getData() {
     try {
-      const apartments = await apartmentService.getAllApartments();
-      setApartmentList(apartments);
+      const accommodations = await accommodationService.getAllAccommodations();
+      setAccommodationList(accommodations);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
     }
@@ -28,27 +28,27 @@ function ApartmentShow({ isAdmin }) {
 
   useEffect(() => {
     getData();
-  }, [apartmentList]);
+  }, [accommodationList]);
 
   function handleClick() {}
 
-  function handleClickEdit(apartment, id) {
-    const findedApartment = apartmentList.find(
-      (apartment) => apartment.id === id
+  function handleClickEdit(accommodation, id) {
+    const findedAccommodation = accommodationList.find(
+      (accommodation) => accommodation.id === id
     );
-    setApartmentSelected(findedApartment);
-    navigate("/EditApartment", { state: { apartment } });
+    setAccommodationSelected(findedAccommodation);
+    navigate("/EditAccommodation", { state: { accommodation } });
   }
 
-  async function handleClickDelete(index) {
+  async function handleClickDelete(id) {
     try {
-      const apartments = await apartmentService.deleteApartment(index);
+      const accommodations = await accommodationService.deleteAccommodation(id);
 
-      const updatedApartmentList = apartmentList.filter(
-        (apartment, index) => index !== indexToDelete
+      const updatedAccommodationList = accommodationList.filter(
+        (accommodation, id) => id !== idToDelete
       );
 
-      setApartmentList(updatedApartmentList);
+      setAccommodationList(updatedAccommodationList);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
     }
@@ -87,11 +87,11 @@ function ApartmentShow({ isAdmin }) {
         ) : (
           <br></br>
         )}
-        {apartmentList.map((apartment, index) => (
+        {accommodationList.map((accommodation, id) => (
           <div
-            key={index}
+            key={id}
             className={
-              index % 3 === 0 ? "amarillo" : index % 3 === 1 ? "rosa" : "verde"
+              id % 3 === 0 ? "amarillo" : id % 3 === 1 ? "rosa" : "verde"
             }
           >
             <Row className="mb-2">
@@ -106,7 +106,7 @@ function ApartmentShow({ isAdmin }) {
                 >
                   <Card.Img
                     variant="top"
-                    src={apartment.image}
+                    src={accommodation.image}
                     style={{
                       width: "300px",
                       height: "300px",
@@ -127,7 +127,7 @@ function ApartmentShow({ isAdmin }) {
                     <div>
                       <br></br>
                       <Card.Title style={{ color: "blue",  fontSize: 30 }}>
-                        {apartment.title}
+                        {accommodation.title}
                       </Card.Title>
                       <Card.Text
                         style={{
@@ -136,13 +136,13 @@ function ApartmentShow({ isAdmin }) {
                           marginBottom: "10px",
                         }}
                       >
-                        {apartment.city}
+                        {accommodation.city}
                       </Card.Text>
                       <Card.Text>
-                        {apartment.description}
+                        {accommodation.description}
                         <br></br>
                         <span className="precioDestacado">
-                          {apartment.price}
+                          {accommodation.price}
                         </span>
                       </Card.Text>
                     </div>
@@ -160,7 +160,7 @@ function ApartmentShow({ isAdmin }) {
                             variant="primary"
                             className="custom-button"
                             onClick={() =>
-                              handleClickEdit(apartment, apartment.id)
+                              handleClickEdit(accommodation, accommodation.id)
                             }
                       
                           >
@@ -170,7 +170,7 @@ function ApartmentShow({ isAdmin }) {
                           {/* Espacio entre los botones */}
                           <Button
                             variant="primary"
-                            onClick={() => handleClickDelete(apartment.id)}
+                            onClick={() => handleClickDelete(accommodation.id)}
                             className="custom-button"
                           >
                             Eliminar
@@ -193,4 +193,4 @@ function ApartmentShow({ isAdmin }) {
     </>
   );
 }
-export default ApartmentShow;
+export default AccommodationShow;

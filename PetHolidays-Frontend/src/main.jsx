@@ -8,7 +8,7 @@ import Home from "./Components/Home/Home";
 import User from "./views/user/User";
 import Admin from "./views/admin/Admin";
 import Contact from "./Components/Contact/Contact";
-import EditApartment from "./Components/EditApartment/EditApartment";
+import EditAccommodation from "./Components/EditAccommodation/EditAccommodation";
 import AddAlojamiento from "./Components/AddAlojamiento/AddAlojamiento";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/User" element={<User />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/EditApartment" element={<EditApartment />} />
+        <Route path="/EditAccommodation" element={<EditAccommodation />} />
         <Route path="/AddAlojamiento" element={<AddAlojamiento />} />
       </Routes>
     </BrowserRouter>

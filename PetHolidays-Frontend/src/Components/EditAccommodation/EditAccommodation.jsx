@@ -6,16 +6,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useLocation } from "react-router-dom";
-import { apartmentService } from "../../service/apartmentService";
+import { accommodationService } from "../../service/accommodationService";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-function EditApartment() {
+function EditAccommodation() {
   const location = useLocation();
-  const apartment = location.state?.apartment;
+  const accommodation = location.state?.accommodation;
 
   const [editable, setEditable] = useState(false);
-  const [editedApartment, setEditedAparment] = useState({ ...apartment });
+  const [editedAccommodation, setEditedAccommodation] = useState({ ...accommodation });
 
   //si hacemos clic en el boton de editar entonces la variable editable es true para que se pueda editar ya que al inicio es false
   const handleEditClick = () => {
@@ -25,7 +25,7 @@ function EditApartment() {
   //cuando hagamos cambios en cualquier campo, que esto se indica por name, cambiamos su value asi tomamos el nuevo valor
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setEditedAparment({ ...editedApartment, [name]: value });
+    setEditedAccommodation({ ...editedAccommodation, [name]: value });
   };
   
   function modalBotones(titulo, texto, icono, danger) {
@@ -53,9 +53,9 @@ function EditApartment() {
 
   async function updateData() {
     try {
-      const apartments = await apartmentService.updateApartment(
-        editedApartment,
-        editedApartment.id
+      const accommodations = await accommodationService.updateAccommodation(
+        editedAccommodation,
+        editedAccommodation.id
       );
     } catch (error) {
       console.error("Error al actualizar los datos:", error);
@@ -85,13 +85,13 @@ function EditApartment() {
           </div>
           <Card.Img
             variant="top"
-            src={editedApartment.image || apartment.image}
+            src={editedAccommodation.image || accommodation.image}
           />
           <Card.Body>
             <Card.Title style={{ color: "green" }}>
               <input
                 name="title"
-                value={editedApartment.title}
+                value={editedAccommodation.title}
                 onChange={handleInputChange}
                 style={{ border: "none", outline: "none" }}
               />
@@ -99,7 +99,7 @@ function EditApartment() {
             <Card.Text>
               <textarea
                 name="description"
-                value={editedApartment.description}
+                value={editedAccommodation.description}
                 onChange={handleInputChange}
                 style={{
                   border: "none",
@@ -113,7 +113,7 @@ function EditApartment() {
                 <input
                   type="text"
                   name="city"
-                  value={editedApartment.city}
+                  value={editedAccommodation.city}
                   onChange={handleInputChange}
                   style={{ border: "none", outline: "none" }}
                 />
@@ -122,7 +122,7 @@ function EditApartment() {
                 <input
                   type="number"
                   name="price"
-                  value={editedApartment.price}
+                  value={editedAccommodation.price}
                   onChange={handleInputChange}
                   style={{ border: "none", outline: "none" }}
                 />
@@ -146,4 +146,4 @@ function EditApartment() {
   );
 }
 
-export default EditApartment;
+export default EditAccommodation;

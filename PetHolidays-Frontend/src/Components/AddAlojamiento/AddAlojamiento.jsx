@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import { apartmentService } from "../../service/apartmentService";
+import { accommodationService } from "../../service/accommodationService";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -45,7 +45,7 @@ export default function AddAlojamiento() {
   }
 
   async function handleSaveClick() {
-    let respuesta = await apartmentService.submitApartment(formData);
+    let respuesta = await accommodationService.submitAccommodation(formData);
 
     modalBotones(
       "Enhorabuena",
@@ -57,9 +57,9 @@ export default function AddAlojamiento() {
 
   async function AddData() {
     try {
-      const apartments = await apartmentService.updateApartment(
-        editedApartment,
-        editedApartment.id
+      const accommodations = await accommodationService.updateAccommodation(
+        editedAccommodation,
+        editedAccommodation.id
       );
     } catch (error) {
       console.error("Error al actualizar los datos:", error);
