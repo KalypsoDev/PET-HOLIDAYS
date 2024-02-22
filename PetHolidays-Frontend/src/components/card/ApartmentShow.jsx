@@ -9,6 +9,8 @@ import Col from 'react-bootstrap/Col';
 import { apartmentService } from '../../service/apartmentService';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+
 
 
 function ApartmentShow({ isAdmin }) {
@@ -35,7 +37,7 @@ function ApartmentShow({ isAdmin }) {
 
     function handleClick() {
 
-        modalBotones("Reservado", "La reserva ha sido correcta", "success", false);
+        
 
     }
 
@@ -102,7 +104,7 @@ function ApartmentShow({ isAdmin }) {
                                                 </div>
 
                                             ) : (
-                                                <Button variant="primary" onClick={() => handleClick()} className="custom-button">Reservar</Button>
+                                                <Button variant="primary" className="custom-button"> reservar</Button>
                                             )}                      </div>
                                     </div>
                                 </Card.Body>
