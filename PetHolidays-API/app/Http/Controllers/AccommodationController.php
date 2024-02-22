@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Accommodation;
 use App\Http\Requests\AccommodationRequest;
+use Illuminate\Http\JsonResponse;
 
 class AccommodationController extends Controller
 {
 
-    public function index()
+    public function index(): JsonResponse
     {
         $accommodations = Accommodation::all();
         return response()->json($accommodations, 200);
     }
 
-    public function store(AccommodationRequest $request)
+    public function store(AccommodationRequest $request): JsonResponse
     {
         Accommodation::create($request->all());
         return response()->json([
@@ -24,13 +24,13 @@ class AccommodationController extends Controller
         ], 201);
     }
 
-    public function show($id)
+    public function show($id): JsonResponse
     {
         $accommodation = Accommodation::find($id);
         return response()->json($accommodation, 200);
     }
 
-    public function update(AccommodationRequest $request, $id)
+    public function update(AccommodationRequest $request, $id): JsonResponse
     {
         $accommodation = Accommodation::find($id);
         $accommodation->title = $request->title;
@@ -45,7 +45,7 @@ class AccommodationController extends Controller
         ], 200);
     }
 
-    public function destroy($id)
+    public function destroy($id): JsonResponse
     {
         Accommodation::find($id)->delete();
         return response()->json([
