@@ -39,8 +39,8 @@ export const accommodationService = {
     }
   },
 
-  async updateAccommodation(accommodation, id) {
-    let updatedResponse = await apiClient.patch(
+  async updateAccommodation(accommodation) {
+    let updatedResponse = await apiClient.put(
       `/accommodation/${accommodation.id}`,
       accommodation
     );
