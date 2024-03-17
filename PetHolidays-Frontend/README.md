@@ -12,7 +12,7 @@
 ## Cómo Usar
 
 1. Clona este repositorio: `git clone https://github.com/Kalypso89/PET-HOLIDAYS.git`
-2. Abre tu terminal e introduce:
+2. Abre tu terminal e introduce lo siguiente:
    - npm install
    - npm run dev
    - npm install -g json server
