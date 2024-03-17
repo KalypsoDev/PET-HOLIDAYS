@@ -31,7 +31,7 @@ For this project we have used :
 - In the SQL query window, paste the provided SQL code:
 
 ```sql
-CREATE DATABASE coders_room; 
+CREATE DATABASE pet_holidays; 
 ```
 
 6. [Clone](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository) the repository: `git clone https://github.com/Kalypso89/PET-HOLIDAYS.git`
