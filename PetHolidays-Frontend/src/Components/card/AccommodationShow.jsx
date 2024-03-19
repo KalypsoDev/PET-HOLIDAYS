@@ -80,7 +80,7 @@ function AccommodationShow({ isAdmin }) {
             }}
           >
             <Button variant="primary" className="custom-button">
-              <Link to={"/AddAlojamiento"} style={{textDecoration: "none", color: "inherit"}}>Añadir Alojamiento</Link>
+              <Link to={"/AddAccommodation"} style={{textDecoration: "none", color: "inherit"}}>Añadir Alojamiento</Link>
             </Button>
             <div style={{ width: "10px" }}></div>{" "}
           </div>

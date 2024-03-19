@@ -6,7 +6,7 @@ import { accommodationService } from "../../service/accommodationService";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-export default function AddAlojamiento() {
+export default function AddAccommodation() {
   const [formData, setFormData] = useState({
     id: "0",
     title: "",
@@ -49,7 +49,7 @@ export default function AddAlojamiento() {
 
     modalBotones(
       "Enhorabuena",
-      "Los datos del alumno se han guardado con exito.",
+      "Los datos del alojamiento se han guardado con exito.",
       "success",
       false
     );

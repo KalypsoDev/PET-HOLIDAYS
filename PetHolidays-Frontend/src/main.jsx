@@ -9,7 +9,7 @@ import User from "./views/user/User";
 import Admin from "./views/admin/Admin";
 import Contact from "./Components/Contact/Contact";
 import EditAccommodation from "./Components/EditAccommodation/EditAccommodation";
-import AddAlojamiento from "./Components/AddAlojamiento/AddAlojamiento";
+import AddAccommodation from "./Components/AddAccommodation/AddAccommodation";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/EditAccommodation" element={<EditAccommodation />} />
-        <Route path="/AddAlojamiento" element={<AddAlojamiento />} />
+        <Route path="/AddAccommodation" element={<AddAccommodation />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
