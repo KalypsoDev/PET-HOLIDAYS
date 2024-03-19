@@ -6,11 +6,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { accommodationService } from "../../service/accommodationService";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import swal from 'sweetalert';
 
 function EditAccommodation() {
+  const navigate = useNavigate();
   const location = useLocation();
   const accommodation = location.state?.accommodation;
 
@@ -37,6 +40,10 @@ function EditAccommodation() {
       dangerMode: danger,
       closeOnClickOutside: false,
       closeOnEsc: false,
+    }).then((willContinue) => {
+      if (willContinue) {
+        navigate('/');
+      }
     });
   }
 

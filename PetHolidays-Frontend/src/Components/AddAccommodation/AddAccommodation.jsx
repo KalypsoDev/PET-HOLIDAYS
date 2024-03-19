@@ -3,10 +3,15 @@ import Footer from "../Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { accommodationService } from "../../service/accommodationService";
+import { useNavigate } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import swal from 'sweetalert';
 
 export default function AddAccommodation() {
+  
+  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     id: "0",
     title: "",
@@ -25,6 +30,10 @@ export default function AddAccommodation() {
       dangerMode: danger,
       closeOnClickOutside: false,
       closeOnEsc: false,
+    }).then((willContinue) => {
+      if (willContinue) {
+        navigate('/');
+      }
     });
   }
 
